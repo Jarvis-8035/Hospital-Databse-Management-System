@@ -31,11 +31,3 @@ def insrt(dic,pat):
             db.execute('UPDATE mytable SET {}="{}" WHERE {}="{}"'.format(key_list[i],value[i][j],key_list[0],value[0][j]))
             db.commit()
     db.close()
-
-#insrt(readCSV("File1.csv"))
-
-#db = sqlite3.connect('mydb1.db')
-#k = db.execute('SELECT * FROM mytable')
-#db.commit()
-#for i in k:
-#    print(i)
