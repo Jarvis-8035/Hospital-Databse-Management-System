@@ -13,7 +13,6 @@ def re(path):
         for i in range(len(list(w))):
             di[list(di.keys())[i]].append(list(w)[i])
     db.close()
-#    print(di)
     return di
 
 def re_p(path):
@@ -27,8 +26,4 @@ def re_p(path):
         for i in range(len(list(w))):
             di[list(di.keys())[i]].append(list(w)[i])
     db.close()
-#    print(di)
     return di
-
-#re('Doctor_Db.db')
-#re_p('Patient_Db.db')
