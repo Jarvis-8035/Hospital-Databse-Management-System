@@ -74,12 +74,6 @@ a=Hospital("Gamora")
 a.problem("Infection")
 a=Hospital("Groot")
 a.problem("Physiotherapy")
-#db = sqlite3.connect('Patient_Db.db')
-#db.commit()
-#k=db.execute('SELECT * FROM mytable')
-#for i in k:
-#    print(i)
-#db.close()
 
 e=readDB.re_p('Patient_Db.db')
 print(e)
