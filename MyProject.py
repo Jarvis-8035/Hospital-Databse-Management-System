@@ -36,7 +36,8 @@ class Hospital():
                 ptnt['Appointment']=["No"]
                 ptnt['Doctor_Assigned']=[hel[x-1]]
                 f=0
-                for i in range(len(docs['DoctorName'])):
+                le=len(docs['DcotorName'])
+                for i in range(le):
                     if docs['DoctorName'][i]==hel[x-1]:
                         f=i
                         break
@@ -55,12 +56,12 @@ class Hospital():
             db.close()
             if len(hel)==0:
                 ptnt['Waiting'].append('Yes')
-                ptnt['Bed'].append(-1)
+                print("Doctor is currently unavailable but we have selected a future appointment for you")
             else:
                 ptnt['Waiting'].append('No')
                 ptnt['Bed'].append(str(self.patient_no))
             readCSV_pat.insrt(ptnt,'Patient_Db.db')
-#            d=readDB.re_p('Patient_Db.db')
+            d=readDB.re_p('Patient_Db.db')
         else:
             print("We can recommend you another Hospital which will treat you in a Better way")
 
